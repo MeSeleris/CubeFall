@@ -1,25 +1,36 @@
 using System;
+using System.Collections;
 using UnityEngine;
-using UnityEngine.Pool;
 
 public class Cube : MonoBehaviour
 {
+    [SerializeField] private CollisionRecolor _recolor;
     [SerializeField] private float _minLifeTime = 2f;
     [SerializeField] private float _maxLifeTime = 5f;
-    
-    public event Action<Cube> OnCollision;
+    private bool isDie = false;
+
     public event Action<Cube> DeathTime;
 
     private void OnCollisionEnter(Collision collision)
     {
-        OnCollision?.Invoke(this);
+        if (isDie) return;
+
+        _recolor.ChangeColorOnce(this);
 
         float time = UnityEngine.Random.Range(_minLifeTime, _maxLifeTime + 1f);
-        Invoke(nameof(TriggerRelease), time);
+        StartCoroutine(Timer(time));
+
+        isDie = true;
     }
 
     private void TriggerRelease()
     {
         DeathTime?.Invoke(this);
+    }
+
+    private IEnumerator Timer(float time)
+    {
+        yield return new WaitForSeconds(time);
+        TriggerRelease();
     }
 }

@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "E:\\projects\\CubeFall\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\collisionrecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collisionrecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|e:\\projects\\cubefall\\assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\spawncubeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawncubeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|e:\\projects\\cubefall\\assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +26,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Spawner.cs",
               "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\Spawner.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
               "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\Spawner.cs",
               "RelativeToolTip": "Assets\\Scripts\\Spawner.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAvwD4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAIwDkAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T14:16:30.891Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Cube.cs",
-              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\Cube.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Cube.cs",
-              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\Cube.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Cube.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T14:19:26.682Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
@@ -66,22 +53,56 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnCubePosition.cs",
               "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\SpawnCubePosition.cs",
               "RelativeToolTip": "Assets\\Scripts\\SpawnCubePosition.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T12:02:29.215Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "CollisionRecolor.cs",
               "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\CollisionRecolor.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\CollisionRecolor.cs",
               "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\CollisionRecolor.cs",
               "RelativeToolTip": "Assets\\Scripts\\CollisionRecolor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T15:37:45.436Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "67e8ffb0-7d8c-45b3-b4b9-1a43bd681ff3",
+        "Display": 0,
+        "X": 2260,
+        "Y": 235,
+        "Width": 2547,
+        "Height": 809,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Cube.cs",
+              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\Cube.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Cube.cs",
+              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\Cube.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Cube.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T14:19:26.682Z",
               "EditorCaption": ""
             }
           ]

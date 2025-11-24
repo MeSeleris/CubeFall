@@ -36,13 +36,12 @@ public class Spawner : MonoBehaviour
     {
         obj.transform.position = _spawnPos.SpawnDetect();
 
-        if (obj.TryGetComponent(out Rigidbody rb))
+        if (obj.TryGetComponent(out Rigidbody rigidbody))
         {
-            rb.angularVelocity = Vector3.zero;
-            rb.linearVelocity =Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
+            rigidbody.linearVelocity =Vector3.zero;
         }
 
-        obj.OnCollision += OnCubeCollision;
         obj.DeathTime += ReleasePool;
 
         obj.gameObject.SetActive(true);
@@ -50,15 +49,10 @@ public class Spawner : MonoBehaviour
 
     private void ReleasePool(Cube obj)
     {        
-        obj.OnCollision -= OnCubeCollision;
         obj.DeathTime -= ReleasePool;
         _collisionRecolor.ResetToDefault(obj);
 
         obj.gameObject.SetActive(false);
-    }
-    private void OnCubeCollision(Cube obj)
-    {
-        _collisionRecolor.ChangeColorOnce(obj);
     }
 
     private void DestroyOnPool(Cube obj)
@@ -68,7 +62,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator SpawnCoroutine()
     {
-        while (true)
+        while (enabled)
         {
             Pool.Get();
             yield return _delaySpawn;
