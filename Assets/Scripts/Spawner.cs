@@ -13,13 +13,13 @@ public class Spawner : MonoBehaviour
 
     private WaitForSeconds _delaySpawn = new WaitForSeconds(1f);
 
-    public ObjectPool<Cube> Pool { get; private set; }   
+    private ObjectPool<Cube> pool;
 
     private void Awake()
     {
-        Pool = new ObjectPool<Cube>(
+        pool = new ObjectPool<Cube>(
             createFunc: () => Instantiate(_prefabToSpawn),
-            actionOnGet: GetFromPool,
+            actionOnGet: prepareGetFromPool,
             actionOnRelease: ReleasePool,
             actionOnDestroy: DestroyOnPool,
             collectionCheck: true,
@@ -32,39 +32,39 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnCoroutine());
     }
 
-    private void GetFromPool(Cube obj)
+    private void prepareGetFromPool(Cube cube)
     {
-        obj.transform.position = _spawnPos.SpawnDetect();
+        cube.transform.position = _spawnPos.SpawnDetect();
 
-        if (obj.TryGetComponent(out Rigidbody rigidbody))
+        if (cube.TryGetComponent(out Rigidbody rigidbody))
         {
             rigidbody.angularVelocity = Vector3.zero;
             rigidbody.linearVelocity =Vector3.zero;
         }
 
-        obj.DeathTime += ReleasePool;
+        cube.CallingDeath += ReleasePool;
 
-        obj.gameObject.SetActive(true);
+        cube.gameObject.SetActive(true);
     }
 
-    private void ReleasePool(Cube obj)
-    {        
-        obj.DeathTime -= ReleasePool;
-        _collisionRecolor.ResetToDefault(obj);
+    private void ReleasePool(Cube cube)
+    {              
+        _collisionRecolor.ResetToDefault(cube);
 
-        obj.gameObject.SetActive(false);
+        cube.gameObject.SetActive(false);
+        cube.CallingDeath -= ReleasePool;
     }
 
-    private void DestroyOnPool(Cube obj)
+    private void DestroyOnPool(Cube cube)
     {
-        Destroy(obj.gameObject);
+        Destroy(cube.gameObject);
     }
 
     private IEnumerator SpawnCoroutine()
     {
         while (enabled)
         {
-            Pool.Get();
+            pool.Get();
             yield return _delaySpawn;
         }
     }
