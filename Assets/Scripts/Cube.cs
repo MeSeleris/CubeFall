@@ -10,6 +10,8 @@ public class Cube : MonoBehaviour
 
     public string targetTag = "Walls";
     private bool isTimerStart = false;
+    private bool isEndTime = false;
+    private bool haveFirstRecolor = false;
 
     public event Action<Cube> CallingDeath;
      
@@ -19,6 +21,18 @@ public class Cube : MonoBehaviour
         {
             if (isTimerStart)
                 return;
+
+            if (isEndTime)
+            {
+                haveFirstRecolor = false;
+                _recolor.ResetToDefault(this);
+            }
+           
+            if (!haveFirstRecolor)
+            {
+                _recolor.SetRandomColor(this);
+                haveFirstRecolor = true;
+            }
 
             _recolor.SetRandomColor(this);
 
@@ -37,6 +51,14 @@ public class Cube : MonoBehaviour
     private IEnumerator StartLifeTimer(float time)
     {
         yield return new WaitForSeconds(time);
+        isEndTime = true;
         TriggerRelease();
+    }
+
+    private void OnDisable()
+    {
+        haveFirstRecolor = false;
+        isEndTime = false;
+        isTimerStart = false;
     }
 }

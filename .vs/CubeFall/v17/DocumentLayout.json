@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "E:\\projects\\CubeFall\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|e:\\projects\\cubefall\\assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cube.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|e:\\projects\\cubefall\\assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\collisionrecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collisionrecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\spawncubeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spawncubeposition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|E:\\projects\\CubeFall\\assets\\scripts\\collisionrecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E30DF7D4-6F05-AB22-C086-53D47AB74253}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\collisionrecolor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,50 +26,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Spawner.cs",
-              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\Spawner.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
-              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\Spawner.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Spawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T14:16:30.891Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SpawnCubePosition.cs",
-              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\SpawnCubePosition.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnCubePosition.cs",
-              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\SpawnCubePosition.cs",
-              "RelativeToolTip": "Assets\\Scripts\\SpawnCubePosition.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T12:02:29.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CollisionRecolor.cs",
-              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\CollisionRecolor.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\CollisionRecolor.cs",
-              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\CollisionRecolor.cs",
-              "RelativeToolTip": "Assets\\Scripts\\CollisionRecolor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T15:37:45.436Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -79,9 +40,48 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Cube.cs",
               "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\Cube.cs",
               "RelativeToolTip": "Assets\\Scripts\\Cube.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-25T21:26:43.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Spawner.cs",
+              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\Spawner.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Spawner.cs",
+              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\Spawner.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Spawner.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwDUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T14:16:30.891Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SpawnCubePosition.cs",
+              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\SpawnCubePosition.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\SpawnCubePosition.cs",
+              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\SpawnCubePosition.cs",
+              "RelativeToolTip": "Assets\\Scripts\\SpawnCubePosition.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T12:02:29.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CollisionRecolor.cs",
+              "DocumentMoniker": "E:\\projects\\CubeFall\\Assets\\Scripts\\CollisionRecolor.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\CollisionRecolor.cs",
+              "ToolTip": "E:\\projects\\CubeFall\\Assets\\Scripts\\CollisionRecolor.cs",
+              "RelativeToolTip": "Assets\\Scripts\\CollisionRecolor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-25T15:37:45.436Z",
               "EditorCaption": ""
             }
           ]

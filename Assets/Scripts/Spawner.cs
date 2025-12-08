@@ -9,7 +9,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] private CollisionRecolor _collisionRecolor;
 
     [SerializeField] private int _poolCapacity = 6;
-    [SerializeField] private int _poolMaxSize = 30;
+    [SerializeField] private int _poolMaxSize = 15;
 
     private WaitForSeconds _delaySpawn = new WaitForSeconds(1f);
 
@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
             rigidbody.linearVelocity =Vector3.zero;
         }
 
-        cube.CallingDeath += ReleasePool;
+        cube.CallingDeath += cubeInstance => pool.Release(cubeInstance);
 
         cube.gameObject.SetActive(true);
     }
@@ -52,7 +52,6 @@ public class Spawner : MonoBehaviour
         _collisionRecolor.ResetToDefault(cube);
 
         cube.gameObject.SetActive(false);
-        cube.CallingDeath -= ReleasePool;
     }
 
     private void DestroyOnPool(Cube cube)
