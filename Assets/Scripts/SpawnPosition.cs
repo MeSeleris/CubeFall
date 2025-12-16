@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class SpawnCubePosition : MonoBehaviour
+public class SpawnPosition : MonoBehaviour
 {
     [SerializeField] private Transform target;
     [SerializeField] private float _numRandomMax;
@@ -23,8 +23,8 @@ public class SpawnCubePosition : MonoBehaviour
         bool isAdditionX = UnityEngine.Random.Range(0, 2) == 0;
         bool isAdditionZ = UnityEngine.Random.Range(0, 2) == 0;
 
-        spawnPosition.x = isAdditionX ? shiftNumber : -shiftNumber; 
-        spawnPosition.z = isAdditionZ ? shiftNumber : -shiftNumber;
+        spawnPosition.x += isAdditionX ? shiftNumber : -shiftNumber; 
+        spawnPosition.z += isAdditionZ ? shiftNumber : -shiftNumber;
         
 
         return spawnPosition;

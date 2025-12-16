@@ -4,61 +4,51 @@ using UnityEngine;
 
 public class Cube : MonoBehaviour
 {
-    [SerializeField] private CollisionRecolor _recolor;
+    public event Action<Cube> RequestRelease;
+
+    [SerializeField] private Recolor _recolor;
     [SerializeField] private float _minLifeTime = 2f;
     [SerializeField] private float _maxLifeTime = 5f;
 
-    public string targetTag = "Walls";
-    private bool isTimerStart = false;
-    private bool isEndTime = false;
-    private bool haveFirstRecolor = false;
+    private bool _isFirstCollision;
+    private Coroutine _lifeRoutine;
 
-    public event Action<Cube> CallingDeath;
-     
-    private void OnCollisionEnter(Collision collision)
+    public void ResetState()
     {
-        if (collision.gameObject.CompareTag(targetTag))
+        _isFirstCollision = false;
+
+        if (_lifeRoutine != null)
         {
-            if (isTimerStart)
-                return;
+            StopCoroutine(_lifeRoutine);
+            _lifeRoutine = null;
+        }
 
-            if (isEndTime)
-            {
-                haveFirstRecolor = false;
-                _recolor.ResetToDefault(this);
-            }
-           
-            if (!haveFirstRecolor)
-            {
-                _recolor.SetRandomColor(this);
-                haveFirstRecolor = true;
-            }
+        _recolor.ResetToDefault(this);
 
-            _recolor.SetRandomColor(this);
-
-            float time = UnityEngine.Random.Range(_minLifeTime, _maxLifeTime + 1f);
-            StartCoroutine(StartLifeTimer(time));
-
-            isTimerStart = true;
-        }      
+        if (TryGetComponent(out Rigidbody rigidbody))
+        {
+            rigidbody.linearVelocity = Vector3.zero;
+            rigidbody.angularVelocity = Vector3.zero;
+        }
     }
 
-    private void TriggerRelease()
+    private void OnCollisionEnter(Collision collision)
     {
-        CallingDeath?.Invoke(this);
+        if (_isFirstCollision)
+            return;
+
+        if (collision.gameObject.TryGetComponent<Platform>(out Platform platform) == false)
+            return;
+
+        _isFirstCollision = true;
+        _recolor.SetRandomColor(this);
+        float time = UnityEngine.Random.Range(_minLifeTime, _maxLifeTime);
+        StartCoroutine(StartLifeTimer(time));
     }
 
     private IEnumerator StartLifeTimer(float time)
     {
         yield return new WaitForSeconds(time);
-        isEndTime = true;
-        TriggerRelease();
-    }
-
-    private void OnDisable()
-    {
-        haveFirstRecolor = false;
-        isEndTime = false;
-        isTimerStart = false;
+        RequestRelease?.Invoke(this);
     }
 }

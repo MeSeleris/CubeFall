@@ -2,11 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class Spawner : MonoBehaviour
+public class SpawnerCube : MonoBehaviour
 {
     [SerializeField] private Cube _prefabToSpawn;
-    [SerializeField] private SpawnCubePosition _spawnPos;
-    [SerializeField] private CollisionRecolor _collisionRecolor;
+    [SerializeField] private SpawnPosition _spawnPos;
+    [SerializeField] private Recolor _collisionRecolor;
 
     [SerializeField] private int _poolCapacity = 6;
     [SerializeField] private int _poolMaxSize = 15;
@@ -18,10 +18,10 @@ public class Spawner : MonoBehaviour
     private void Awake()
     {
         pool = new ObjectPool<Cube>(
-            createFunc: () => Instantiate(_prefabToSpawn),
-            actionOnGet: prepareGetFromPool,
-            actionOnRelease: ReleasePool,
-            actionOnDestroy: DestroyOnPool,
+            createFunc : () => Instantiate(_prefabToSpawn),
+            actionOnGet: PrepareGetCube,
+            actionOnRelease: PrepareReleaseCube,
+            actionOnDestroy: DestroyCube,
             collectionCheck: true,
             defaultCapacity: _poolCapacity,
             maxSize: _poolMaxSize);
@@ -32,31 +32,27 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnCoroutine());
     }
 
-    private void prepareGetFromPool(Cube cube)
+    private void PrepareGetCube(Cube cube)
     {
-        cube.transform.position = _spawnPos.SpawnDetect();
-
-        if (cube.TryGetComponent(out Rigidbody rigidbody))
-        {
-            rigidbody.angularVelocity = Vector3.zero;
-            rigidbody.linearVelocity =Vector3.zero;
-        }
-
-        cube.CallingDeath += cubeInstance => pool.Release(cubeInstance);
-
+        cube.RequestRelease += OnCubeRequestRelease;      
+        cube.transform.position = _spawnPos.SpawnDetect();      
         cube.gameObject.SetActive(true);
     }
 
-    private void ReleasePool(Cube cube)
-    {              
-        _collisionRecolor.ResetToDefault(cube);
-
+    private void PrepareReleaseCube(Cube cube)
+    {
+        cube.ResetState();
         cube.gameObject.SetActive(false);
     }
 
-    private void DestroyOnPool(Cube cube)
-    {
+    private void DestroyCube(Cube cube)
+    {       
         Destroy(cube.gameObject);
+    }
+    private void OnCubeRequestRelease(Cube cube)
+    {
+        pool.Release(cube);
+        cube.RequestRelease -= OnCubeRequestRelease;
     }
 
     private IEnumerator SpawnCoroutine()

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CollisionRecolor : MonoBehaviour
+public class Recolor : MonoBehaviour
 {
     [SerializeField] private Material _defaultMaterial;
 

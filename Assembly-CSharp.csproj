@@ -61,10 +61,11 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.59f2\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Spawner.cs" />
+    <Compile Include="Assets\Scripts\SpawnerCube.cs" />
+    <Compile Include="Assets\Scripts\Recolor.cs" />
+    <Compile Include="Assets\Scripts\Platform.cs" />
+    <Compile Include="Assets\Scripts\SpawnPosition.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\SpawnCubePosition.cs" />
-    <Compile Include="Assets\Scripts\CollisionRecolor.cs" />
     <Compile Include="Assets\Scripts\Cube.cs" />
   </ItemGroup>
   <ItemGroup>
